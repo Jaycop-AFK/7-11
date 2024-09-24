@@ -68,7 +68,9 @@ namespace _7_11
         {
             try
             {
+
                 cmd = new SqlCommand("UPDATE users SET user_firstName=@name,user_lastName=@lastname,user_email=@email,user_name@username,user_password@password WHERE user_ID=@id", conn);
+
                 parameter();
                 conn.Open();
                 int result = cmd.ExecuteNonQuery();
