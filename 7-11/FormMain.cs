@@ -46,7 +46,14 @@ namespace _7_11
 
         private void userToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if (ActiveMdiChild != null)
+            {
+                ActiveMdiChild.Close();
+            }
+            FormUser formuser = new FormUser();
+            formuser.MdiParent = this;
+            formuser.Dock = DockStyle.Fill;
+            formuser.Show();
         }
 
         private void productToolStripMenuItem1_Click(object sender, EventArgs e)

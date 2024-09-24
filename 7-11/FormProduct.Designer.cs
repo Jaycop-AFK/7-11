@@ -46,24 +46,24 @@
             this.t_search = new System.Windows.Forms.TextBox();
             this.b_search = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.t_id = new System.Windows.Forms.TextBox();
             this.t_price = new System.Windows.Forms.TextBox();
             this.t_name = new System.Windows.Forms.TextBox();
             this.t_amount = new System.Windows.Forms.TextBox();
             this.t_type = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.productBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._7_11DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -230,6 +230,43 @@
             this.dataGridView1.Size = new System.Drawing.Size(612, 278);
             this.dataGridView1.TabIndex = 12;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "product_id";
+            this.id.HeaderText = "รหัสสินค้า";
+            this.id.Name = "id";
+            // 
+            // name
+            // 
+            this.name.DataPropertyName = "product_name";
+            this.name.HeaderText = "ชื่อสินค้า";
+            this.name.Name = "name";
+            this.name.Width = 160;
+            // 
+            // price
+            // 
+            this.price.DataPropertyName = "product_price";
+            this.price.HeaderText = "ราคา";
+            this.price.Name = "price";
+            // 
+            // amount
+            // 
+            this.amount.DataPropertyName = "product_amout";
+            this.amount.HeaderText = "จำนวน";
+            this.amount.Name = "amount";
+            // 
+            // type
+            // 
+            this.type.DataPropertyName = "peoduct_tID";
+            this.type.HeaderText = "ประเภทสินค้า";
+            this.type.Name = "type";
+            // 
+            // productBindingSource1
+            // 
+            this.productBindingSource1.DataMember = "product";
+            this.productBindingSource1.DataSource = this._7_11DataSet;
             // 
             // t_id
             // 
@@ -283,42 +320,6 @@
             this.panel1.Size = new System.Drawing.Size(804, 69);
             this.panel1.TabIndex = 18;
             // 
-            // productBindingSource1
-            // 
-            this.productBindingSource1.DataMember = "product";
-            this.productBindingSource1.DataSource = this._7_11DataSet;
-            // 
-            // id
-            // 
-            this.id.DataPropertyName = "product_id";
-            this.id.HeaderText = "รหัสสินค้า";
-            this.id.Name = "id";
-            // 
-            // name
-            // 
-            this.name.DataPropertyName = "product_name";
-            this.name.HeaderText = "ชื่อสินค้า";
-            this.name.Name = "name";
-            this.name.Width = 160;
-            // 
-            // price
-            // 
-            this.price.DataPropertyName = "product_price";
-            this.price.HeaderText = "ราคา";
-            this.price.Name = "price";
-            // 
-            // amount
-            // 
-            this.amount.DataPropertyName = "product_amout";
-            this.amount.HeaderText = "จำนวน";
-            this.amount.Name = "amount";
-            // 
-            // type
-            // 
-            this.type.DataPropertyName = "peoduct_tID";
-            this.type.HeaderText = "ประเภทสินค้า";
-            this.type.Name = "type";
-            // 
             // FormProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -348,9 +349,9 @@
             ((System.ComponentModel.ISupportInitialize)(this._7_11DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
